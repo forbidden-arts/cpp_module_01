@@ -6,7 +6,7 @@
 #    By: dpalmer <dpalmer@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/05 11:21:54 by dpalmer           #+#    #+#              #
-#    Updated: 2023/10/05 11:53:34 by dpalmer          ###   ########.fr        #
+#    Updated: 2023/10/05 12:51:30 by dpalmer          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,10 @@ CYAN = \033[0;96m
 
 #Sources
 
-SRC_FILES	=	megaphone
+SRC_FILES	=	main		\
+				newZombie	\
+				randomChump	\
+				Zombie
 
 SRC 		= 	$(addprefix $(SRC_DIR), $(addsuffix .cpp, $(SRC_FILES)))
 OBJ 		= 	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
@@ -36,7 +39,7 @@ OBJ 		= 	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 all:		$(NAME)
 
 $(NAME):	$(OBJ)
-			@$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(ADDON)
+			$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(ADDON)
 			@echo "$(B_MAGENTA)$(NAME) compiled successfully$(C_RESET)"
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c

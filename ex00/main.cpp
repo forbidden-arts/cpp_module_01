@@ -6,7 +6,7 @@
 /*   By: dpalmer <dpalmer@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 11:52:01 by dpalmer           #+#    #+#             */
-/*   Updated: 2023/10/05 12:45:43 by dpalmer          ###   ########.fr       */
+/*   Updated: 2023/10/05 12:49:29 by dpalmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(void)
 {
-	Zombie	stack_zombie("Stack");
+	Zombie	stack_zombie("Stack Zombie");
 	Zombie	*heap_zombie = newZombie("Heap Zombie");
 
 	randomChump("Chump Zombie");
