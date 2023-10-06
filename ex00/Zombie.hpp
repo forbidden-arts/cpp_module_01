@@ -6,7 +6,7 @@
 /*   By: dpalmer <dpalmer@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 11:46:53 by dpalmer           #+#    #+#             */
-/*   Updated: 2023/10/05 13:07:24 by dpalmer          ###   ########.fr       */
+/*   Updated: 2023/10/06 09:57:07 by dpalmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class Zombie
 		const std::string	_name;
 
 	public:
-		Zombie();		//Constructor
-		~Zombie();		//Destructor
+		Zombie(void);		//Constructor
+		~Zombie(void);		//Destructor
 
 		Zombie(std::string name);
 		void	announce(void) const;
