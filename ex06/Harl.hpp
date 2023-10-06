@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpalmer <dpalmer@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/06 10:37:29 by dpalmer           #+#    #+#             */
-/*   Updated: 2023/10/06 11:11:30 by dpalmer          ###   ########.fr       */
+/*   Created: 2023/10/06 10:37:23 by dpalmer           #+#    #+#             */
+/*   Updated: 2023/10/06 11:09:22 by dpalmer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#ifndef HARL_HPP
+# define HARL_HPP
 
-int	main(void)
+#include <iostream>
+
+class   Harl
 {
-	Harl	harl;
+private:
+	void	debug(void);
+	void	info(void);
+	void	warning(void);
+	void	error(void);
 
-	harl.complain("DEBUG");
-	harl.complain("INFO");
-	harl.complain("WARNING");
-	harl.complain("ERROR");
-	return (0);
-}
+public:
+	Harl(void);
+	~Harl(void);
+	void	complain( std:: string level );
+};
+
+typedef void (Harl::*t_func) (void);
+
+#endif
